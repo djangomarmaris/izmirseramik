@@ -1,0 +1,560 @@
+{% extends "base.html" %}
+
+{% load static i18n %}
+
+{% block css %}
+
+{% endblock %}
+
+
+{% block seo %}
+  <title>İzmir Seramik | Seramikte Estetik, Güç ve Zamanın Ötesi Çözümler</title>
+  <meta name="description" content="İzmir Seramik, mermerden betona, doğal taşlardan ahşap dokulara uzanan geniş ürün yelpazesiyle estetik ve dayanıklılığı bir araya getiriyor. Kaliteli seramik çözümleri için doğru adres.">
+  <meta name="keywords" content="izmir seramik, seramik, karo, yer karosu, duvar seramiği, mermer görünümlü seramik, beton görünümlü karo, doğal taş, porselen karo, iç mekan seramiği, dış cephe seramiği, ebatlı seramik, 30x60, 60x60, 60x120">
+  <meta name="author" content="İzmir Seramik">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.izmirseramik.com.tr/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="İzmir Seramik | Estetik & Fonksiyonun Buluşma Noktası">
+  <meta property="og:description" content="Seramik dünyasında ilham veren tasarımlar, yüksek kalite ve geniş ürün yelpazesi İzmir Seramik'te.">
+  <meta property="og:image" content="{% static 'og-default.jpg' %}">
+  <meta property="og:url" content="https://www.izmirseramik.com.tr/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="İzmir Seramik | Modern ve Zamansız Seramikler">
+  <meta name="twitter:description" content="Modern mimarinin ihtiyaç duyduğu tüm seramik çözümleri İzmir Seramik'te.">
+  <meta name="twitter:image" content="{% static 'og-default.jpg' %}">
+
+  <!-- Language / Char -->
+  <meta charset="UTF-8">
+  <meta name="language" content="tr">
+  <meta http-equiv="Content-Language" content="tr">
+{% endblock %}
+
+
+{% block content %}
+ <main id="main">
+            <!-- PAGE LINE-->
+            <div class="page-line">
+                <div class="container">
+                    <div class="page-line__inner">
+                        <div class="page-col"></div>
+                        <div class="page-col"></div>
+                        <div class="page-col"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- END PAGE LINE-->
+
+            <!-- SLIDER-->
+            <section>
+    <div class="rev_slider_wrapper rev_slider_wrapper--p80 tp-overflow-hidden">
+        <div class="rev_slider fullwidthabanner js-rev" data-version="5.4.4" style="display:none"
+            data-rev-layout="fullscreen"
+            data-rev-stylearrow="au-rev-arrow-1"
+            data-rev-bullets="true"
+            data-rev-stylebullet="au-rev-bullet-1"
+            data-rev-voffbullet="55">
+            <ul>
+                {% for slider in sliders %}
+                <li class="rev-item rev-item-1" data-transition="crossfade">
+                    <img class="rev-slidebg" src="{{ slider.image.url }}" alt="{{ slider.title }}" />
+
+                    <h4 class="tp-caption tp-resizeme rev-text-1"
+                        data-frames="[{&quot;delay&quot;:0,&quot;speed&quot;:1800,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%]&quot;,&quot;to&quot;:&quot;o:1&quot;}]"
+                        data-x="['left']" data-y="['middle']" data-hoffset="0" data-voffset="-118"
+                        data-fontsize="18" data-color="#fff">{{ slider.subtitle }}</h4>
+
+                    <h2 class="tp-caption tp-resizeme rev-text-2"
+                        data-frames="[{&quot;delay&quot;:800,&quot;speed&quot;:2100,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;x:[-100%]&quot;,&quot;to&quot;:&quot;o:1&quot;}]"
+                        data-x="left" data-y="center" data-hoffset="0" data-voffset="-30"
+                        data-fontsize="46" data-color="#fff">{{ slider.title }}</h2>
+
+                    {% if slider.button_text and slider.button_link %}
+                    <a class="tp-caption tp-resizeme"
+                        href="{{ slider.button_link }}" target="_self"
+                        data-frames="[{&quot;delay&quot;:0,&quot;speed&quot;:1800,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];opacity:0;&quot;,&quot;to&quot;:&quot;o:1&quot;}]">
+                        <span class="rev-btn-1">{{ slider.button_text }}
+                            <span class="arrow" data-paddingleft="5">
+                                <i class="zmdi zmdi-arrow-right"></i>
+                            </span>
+                        </span>
+                    </a>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="rev-spacer"></div>
+</section>
+
+ <section class="p-t-10 p-b-55">
+                <div class="container">
+                    <div class="media-about">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <div class="media__body">
+                                    <h5 class="title-sub">Hakkımızda</h5>
+                                    <h2 class="title-1">Zamana Meydan Okuyan Estetik, Kusursuz İşçilik.</h2>
+                                    <p class="media__text">İzmir Seramik olarak, her yaşam alanının bir hikâyesi olduğuna inanıyoruz. Bu hikâyeyi; zarif tasarımlar, kaliteli malzemeler ve özenli işçilikle anlatıyoruz. 30 yılı aşkın sektör deneyimimiz ile seramik dünyasında estetik ve fonksiyonun buluşma noktasıyız.
+
+Mermerden betona, ahşaptan doğal taşa, sade dokulardan konsept tasarımlara kadar geniş ürün yelpazemiz; iç ve dış mekânlarda fark yaratan projelere ilham kaynağı oluyor. Modern mimarinin ihtiyaç duyduğu tüm seramik çözümlerini, kalite ve şıklıkla bir araya getiriyoruz.
+
+Gelişmiş üretim teknolojileri, sürdürülebilir yaklaşımlar ve tasarım tutkusuyla ürettiğimiz her karo; sadece bir malzeme değil, aynı zamanda bir yaşam vizyonudur. Projenizin büyüklüğü ne olursa olsun; İzmir Seramik, estetik ve dayanıklılığı aynı çizgide buluşturur.
+
+Biz sadece seramik üretmiyoruz.
+Mekânlara ruh katıyor, yaşam alanlarını dönüştürüyor, mimariye değer katıyoruz.</p>
+                                    <a class="au-btn au-btn--arrow" href="about-us.html">Read more
+                                        <i class="zmdi zmdi-arrow-right ic-arrow"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="media__img js-line">
+                                    <img src="{% static '30.png' %}" alt="About">
+                                    <span class="line"></span>
+                                    <span class="line line-bottom"></span>
+                                    <div class="media__img-inner wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                                        <span class="number">30</span>
+                                        <span class="desc">Sektörel Bilgi ve Tecribe</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+<section class="p-b-100 p-t-70">
+  <div class="wrap wrap--w1790">
+    <div class="container-fluid">
+      <div class="section-title m-b-70">
+        <h5 class="title-sub">İzmir Seramik</h5>
+        <h2 class="title-1">Koleksiyonlar</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mb-4">
+          <article class="media-project-2">
+            <figure class="media__img">
+              <img src="{% static 'marblex.jpg' %}" alt="luxury villa" />
+            </figure>
+            <div class="media__body">
+              <h3 class="media__title"><a href="project-grid-full.html">Mermer</a></h3>
+
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <article class="media-project-2">
+            <figure class="media__img">
+              <img src="{% static 'beton.jpg' %}" alt="wooden villa" />
+            </figure>
+            <div class="media__body">
+              <h3 class="media__title"><a href="project-grid-full.html">Beton</a></h3>
+
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <article class="media-project-2">
+            <figure class="media__img">
+              <img src="{% static 'ahşap.jpg' %}" alt="Stiff homestay" />
+            </figure>
+            <div class="media__body">
+              <h3 class="media__title"><a href="project-grid-full.html">Ahşap</a></h3>
+
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <article class="media-project-2">
+            <figure class="media__img">
+              <img src="{% static 'doğaltaş.jpg' %}" alt="Frozen house" />
+            </figure>
+            <div class="media__body">
+              <h3 class="media__title"><a href="project-grid-full.html">Doğal Taş</a></h3>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <article class="media-project-2">
+            <figure class="media__img">
+              <img src="{% static 'duz.webp' %}" alt="luxury villa" />
+            </figure>
+            <div class="media__body">
+              <h3 class="media__title"><a href="project-grid-full.html">Düz</a></h3>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <article class="media-project-2">
+            <figure class="media__img">
+              <img src="{% static 'kon.webp' %}" alt="wooden villa" />
+            </figure>
+            <div class="media__body">
+              <h3 class="media__title"><a href="project-grid-full.html">Konsept</a></h3>
+              <span class="address">New York, USA</span>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="text-center p-t-40">
+        <a class="au-btn" href="project-grid-full.html">See all project</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="p-t-65 p-b-65">
+    <div class="container">
+        <div class="section-title m-b-70">
+            <h5 class="title-sub">İzmir Seramik</h5>
+            <h2 class="title-1">Öne Çıkanlar</h2>
+        </div>
+        <div class="row gutter-xl">
+            <div class="col-md-6">
+                <article class="blog">
+                    <figure class="entry-image">
+                        <a href="blog-grid.html">
+                            <img src="{% static 'o1.jpg' %}" alt="the villa overlooks dramatic mountainous scenery" />
+                        </a>
+                    </figure>
+                    <div class="entry-summary">
+                        <h4 class="entry-title">
+                            <a href="blog-grid.html">VERDE GOLD</a>
+                        </h4>
+
+
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-6">
+                <article class="blog">
+                    <figure class="entry-image">
+                        <a href="blog-grid.html">
+                            <img src="{% static 'o3.jpg' %}" alt="Will Bruder clads a mountain home in Aspen" />
+                        </a>
+                    </figure>
+                    <div class="entry-summary">
+                        <h4 class="entry-title">
+                            <a href="blog-grid.html">DEEP BLUE</a>
+                        </h4>
+
+
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<style>
+.parallax-section {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+  z-index: 1;
+  transform: translateY(0);
+}
+
+.parallax-overlay {
+  z-index: 2;
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.parallax-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.parallax-subtitle {
+  font-size: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .parallax-title { font-size: 32px; }
+  .parallax-subtitle { font-size: 16px; }
+}
+</style>
+
+<section class="parallax-section js-parallax" data-parallax-img="{% static 'paralax.webp' %}">
+  <div class="parallax-bg"></div>
+  <div class="parallax-overlay">
+    <div class="container">
+      <h2 class="parallax-title">Elegant & Modern Ceramics</h2>
+      <p class="parallax-subtitle">Discover timeless designs, crafted with precision.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const parallaxEls = document.querySelectorAll('.js-parallax');
+
+  window.addEventListener('scroll', function () {
+    parallaxEls.forEach(function (el) {
+      const bg = el.querySelector('.parallax-bg');
+      const speed = 0.4;
+      const offset = window.pageYOffset - el.offsetTop;
+      bg.style.transform = 'translateY(' + offset * speed + 'px)';
+    });
+  });
+
+  parallaxEls.forEach(function (el) {
+    const bg = el.querySelector('.parallax-bg');
+    const imageUrl = el.getAttribute('data-parallax-img');
+    bg.style.backgroundImage = `url(${imageUrl})`;
+  });
+});
+</script>
+
+
+
+<section class="p-t-110">
+  <div class="wrap wrap--w1790">
+    <div class="container-fluid">
+      <article class="media-project-3">
+        <div class="media__body">
+          <figure class="media__img">
+            <a href="project-detail-1.html">
+              <img src="{% static '963.jpg' %}" alt="Space Speaker Studio" />
+            </a>
+          </figure>
+          <span class="add">İzmir Seramik</span>
+          <span class="year">30.yıl</span>
+          <div class="media__content">
+            <div class="pointer"></div>
+            <h4 class="title-sub title-sub--c8">BETON</h4>
+            <h2 class="title-3">Most White</h2>
+            <a class="au-btn au-btn--arrow" href="project-detail-1.html">See Project <i class="zmdi zmdi-arrow-right ic-arrow"></i></a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap wrap--w1790">
+    <div class="container-fluid">
+      <article class="media-project-3 right">
+        <div class="media__body">
+          <figure class="media__img">
+            <a href="project-detail-1.html">
+              <img src="{% static '964.jpg' %}" alt="Lunisolar Homestay" />
+            </a>
+          </figure>
+          <span class="add">İzmir Seramik</span>
+          <span class="year">30.YIL</span>
+          <div class="media__content">
+            <div class="pointer"></div>
+            <h4 class="title-sub title-sub--c8">MERMER</h4>
+            <h2 class="title-3">Magnum Black</h2>
+            <a class="au-btn au-btn--arrow" href="project-detail-1.html">See Project <i class="zmdi zmdi-arrow-right ic-arrow"></i></a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap wrap--w1790">
+    <div class="container-fluid">
+      <article class="media-project-3">
+        <div class="media__body">
+          <figure class="media__img">
+            <a href="project-detail-1.html">
+              <img src="{% static '965.jpg' %}" alt="B.o.x Studio" />
+            </a>
+          </figure>
+          <span class="add">İzmir Seramik</span>
+          <span class="year">30.YIL</span>
+          <div class="media__content">
+            <div class="pointer"></div>
+            <h4 class="title-sub title-sub--c8">DOĞAL TAŞ</h4>
+            <h2 class="title-3">Calacata Grey</h2>
+            <a class="au-btn au-btn--arrow" href="project-detail-1.html">See Project <i class="zmdi zmdi-arrow-right ic-arrow"></i></a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap wrap--w1790">
+    <div class="container-fluid">
+      <article class="media-project-3 right">
+        <div class="media__body">
+          <figure class="media__img">
+            <a href="project-detail-1.html">
+              <img src="{% static '967.jpg' %}" alt="Tourliver University" />
+            </a>
+          </figure>
+          <span class="add">İzmir Seramik</span>
+          <span class="year">30.YIL</span>
+          <div class="media__content">
+            <div class="pointer"></div>
+            <h4 class="title-sub title-sub--c8">KONSEPT</h4>
+            <h2 class="title-3">Figma Blue</h2>
+            <a class="au-btn au-btn--arrow" href="project-detail-1.html">See Project <i class="zmdi zmdi-arrow-right ic-arrow"></i></a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap wrap--w1790">
+    <div class="container-fluid">
+      <article class="media-project-3">
+        <div class="media__body">
+          <figure class="media__img">
+            <a href="project-detail-1.html">
+              <img src="{% static 'cotto.jpg' %}" alt="Mountain Home" />
+            </a>
+          </figure>
+          <span class="add">İzmir Seramik</span>
+          <span class="year">30.YIL</span>
+          <div class="media__content">
+            <div class="pointer"></div>
+            <h4 class="title-sub title-sub--c8">RENKLİ</h4>
+            <h2 class="title-3">COTTO EL TOSCANO</h2>
+            <a class="au-btn au-btn--arrow" href="project-detail-1.html">See Project <i class="zmdi zmdi-arrow-right ic-arrow"></i></a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap wrap--w1790">
+    <div class="container-fluid">
+      <article class="media-project-3 right">
+        <div class="media__body">
+          <figure class="media__img">
+            <a href="project-detail-1.html">
+              <img src="{% static '961.jpg' %}" alt="Blink Villa" />
+            </a>
+          </figure>
+          <span class="add">İzmir Seramik</span>
+          <span class="year">30.YIL</span>
+          <div class="media__content">
+            <div class="pointer"></div>
+            <h4 class="title-sub title-sub--c8">TRAVERTİNO</h4>
+            <h2 class="title-3">TRAVERTİNO MONK</h2>
+            <a class="au-btn au-btn--arrow" href="project-detail-1.html">See Project <i class="zmdi zmdi-arrow-right ic-arrow"></i></a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="p-t-60 p-b-55">
+    <div class="container">
+        <div class="section-title">
+            <h5 class="title-sub">Ne Sunuyoruz</h5>
+            <h2 class="title-1">Uzmanlık Alanlarımız</h2>
+        </div>
+        <div class="row no-gutters">
+            <div class="col-md-6 col-lg-4">
+                <article class="media media-service">
+                    <figure class="media__img">
+                        <img src="{% static 'images/icon/service-01.png' %}" alt="Zengin Ürün Yelpazesi" />
+                    </figure>
+                    <div class="media__title">
+                        <h3 class="title">
+                            <a href="#">Zengin Ürün Yelpazesi</a>
+                        </h3>
+                        <span class="number">01</span>
+                    </div>
+                    <p class="media__text">
+                        Yer karosu, duvar seramiği, porselen, granit ve dekoratif seçeneklerle her mekâna uygun binlerce ürün seçeneği sunuyoruz.
+                    </p>
+                </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <article class="media media-service">
+                    <figure class="media__img">
+                        <img src="{% static 'images/icon/service-02.png' %}" alt="Proje Teslimat Desteği" />
+                    </figure>
+                    <div class="media__title">
+                        <h3 class="title">
+                            <a href="#">Proje Teslimat Desteği</a>
+                        </h3>
+                        <span class="number">02</span>
+                    </div>
+                    <p class="media__text">
+                        Müteahhit, mimar ve dekorasyon firmaları için toplu alım, hızlı tedarik ve zamanında teslimat garantisi sunuyoruz.
+                    </p>
+                </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <article class="media media-service">
+                    <figure class="media__img">
+                        <img src="{% static 'images/icon/service-03.png' %}" alt="Bireysel Müşteri Danışmanlığı" />
+                    </figure>
+                    <div class="media__title">
+                        <h3 class="title">
+                            <a href="#">Bireysel Müşteri Danışmanlığı</a>
+                        </h3>
+                        <span class="number">03</span>
+                    </div>
+                    <p class="media__text">
+                        Ev tadilatı veya yeni yaşam alanı için en doğru seramikleri birlikte seçiyor, renk, doku ve ebat önerilerinde bulunuyoruz.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock %}
+
+
+
+{% block jss %}
+
+{% endblock %}
+
+

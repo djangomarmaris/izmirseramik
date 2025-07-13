@@ -1,0 +1,113 @@
+<!doctype html>
+{% load static i18n %}
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+     <link href="{% static 'vendor/mdi-font/css/material-design-iconic-font.min.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'vendor/font-awesome-5/css/fontawesome-all.min.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'vendor/themify-font/themify-icons.css' %}" rel="stylesheet" media="all">
+    <!-- Base fonts of theme-->
+    <link href="{% static 'css/poppins-font.min.css' %}" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+
+    <!-- Bootstrap CSS-->
+    <link href="{% static 'vendor/bootstrap-4.1/bootstrap.min.css' %}" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="{% static 'vendor/animate.css/animate.min.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'vendor/css-hamburgers/hamburgers.min.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'vendor/animsition/animsition.min.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'vendor/slick/slick.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'vendor/select2/select2.min.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'vendor/revolution/css/layers.css' %}" rel="stylesheet" />
+    <link href="{% static 'vendor/revolution/css/navigation.css' %}" rel="stylesheet" />
+    <link href="{% static 'vendor/revolution/css/settings.css' %}" rel="stylesheet" />
+
+    <!-- Main CSS-->
+    <link href="{% static 'css/main.min.css' %}" rel="stylesheet" media="all">
+
+    <!--Favicons-->
+    <link rel="shortcut icon" href="{% static 'icon.png' %}">
+
+    {% block seo %}
+
+    {% endblock %}
+    {% block css %}
+
+    {% endblock %}
+
+
+</head>
+
+<body class="animsition js-preloader">
+
+
+
+
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+
+
+
+{% include "navbar.html" %}
+{% block content %}
+
+
+
+{% endblock %}
+{% include "footer.html" %}
+
+
+
+
+
+{% block jss %}
+{% endblock %}
+
+ <script data-cfasync="false" src=""></script><script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <!-- Bootstrap JS-->
+    <script src="{% static 'vendor/bootstrap-4.1/bootstrap.min.js' %}"></script>
+    <!-- Vendor JS-->
+    <script src="{% static 'vendor/animsition/animsition.min.js' %}"></script>
+    <script src="{% static 'vendor/slick/slick.min.js' %}"></script>
+    <script src="{% static 'vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'vendor/wow/wow.min.js' %}"></script>
+    <script src="{% static 'vendor/jquery.counterup/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'vendor/isotope/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'vendor/isotope/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'vendor/matchHeight/jquery.matchHeight-min.js' %}"></script>
+    <script src="{% static 'vendor/select2/select2.min.js' %}"></script>
+    <script src="{% static 'vendor/sweetalert/sweetalert.min.js' %}"></script>
+    <script src="{% static 'vendor/noUiSlider/nouislider.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'vendor/revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'vendor/revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+
+    <script type="text/javascript" src="{% static 'vendor/revolution/js/extensions/revolution.extension.video.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'vendor/revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'vendor/revolution/js/extensions/revolution.extension.actions.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'vendor/revolution/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'vendor/revolution/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'vendor/revolution/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'vendor/revolution/js/extensions/revolution.extension.migration.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'vendor/revolution/js/extensions/revolution.extension.parallax.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'vendor/revolution/js/extensions/revolution.extension.carousel.min.js' %}"></script>
+    <!-- Config Revolution Slider-->
+    <script type="text/javascript" src="{% static 'js/config-revolution.min.js' %}"></script>
+
+    <!-- Main JS-->
+    <script src="{% static 'js/global.js' %}"></script>
+
+
+</body>
+</html>
